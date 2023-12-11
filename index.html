@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./icons/favicon.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <div class="box">
+        <div class="first">
+          <input type="text" id="location" placeholder="Enter city name" />
+          <button type="button" id="button">Get</button>
+        </div>
+        <div class="second">
+          <div class="images">
+            <img src="./icons/sun.png" alt="sun" id="sun" />
+            <img src="./icons/storm.png" alt="storm" id="storm" />
+            <img src="./icons/rainy-day.png" alt="rainyday" id="rainy_day" />
+            <img src="./icons/cloudy.png" alt="cloudy" id="cloudy" />
+            <img src="./icons/fog.png" alt="mist" id="fog" />
+            <img src="./icons/cloud.png" alt="cloud" id="clouds">
+          </div>
+          <div class="location">
+            LOCATION
+          </div>
+          <div class="having">
+            Having
+          </div>
+        </div>
+        <div class="third">
+          <div class="values">
+            <div class="valuesone">
+              <div class="valuesoneleft">
+                <div class="one">
+                  <span class="tempc">Temp min ::</span>
+                  <span class="tempcvalue">0</span>
+                </div>
+                <div class="two">
+                  <span class="tempf">Temp max :: </span>
+                  <span class="tempfvalue">0</span>
+                </div>
+              </div>
+              <div class="valuesoneright">
+                <div class="three">
+                  <span class="windkmph">Wind speed ::</span>
+                  <span class="windkmphvalue">0 kmph</span>
+                </div>
+                <div class="four">
+                  <span class="windmph">Wind gust ::</span>
+                  <span class="windmphvalue">0 kt</span>
+                </div>
+              </div>
+            </div>
+            <div class="five">
+              <span class="winddirection">Humidity ::</span>
+              <span class="winddirectionvalue">0%</span>
+            </div>
+            <div class="six">
+              <span class="winddegree">Wind degree ::</span>
+              <span class="winddegreevalue">0°</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./index.js" defer></script>
+</html>
