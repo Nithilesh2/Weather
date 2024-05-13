@@ -28,8 +28,8 @@ button.addEventListener("click", () => {
       location_value.innerHTML = data.message;
     } else {
       location_value.innerHTML = data.name;
-      tempcvalue.innerHTML = data.main.temp_min;
-      tempfvalue.innerHTML = data.main.temp_max;
+      tempcvalue.innerHTML = Math.round(data.main.temp_min - 273.15) + "&deg C";
+      tempfvalue.innerHTML = Math.round(data.main.temp_max - 273.15) + "&deg C";
       windkmphvalue.innerHTML = data.wind.speed + " kmph";
       windmphvalue.innerHTML = data.wind.gust + " kt";
       winddirectionvalue.innerHTML = data.main.humidity + " %";
@@ -87,8 +87,8 @@ async function btnCrntLocation(latitude, longitude) {
       location_value.innerHTML = data.message;
     } else {
       location_value.innerHTML = data.name;
-      tempcvalue.innerHTML = data.main.temp_min;
-      tempfvalue.innerHTML = data.main.temp_max;
+      tempcvalue.innerHTML = Math.round(data.main.temp_min - 273.15) + "&deg C";
+      tempfvalue.innerHTML = Math.round(data.main.temp_max - 273.15) + "&deg C";
       windkmphvalue.innerHTML = data.wind.speed + " kmph";
       windmphvalue.innerHTML = data.wind.gust + " kt";
       winddirectionvalue.innerHTML = data.main.humidity + " %";
@@ -137,11 +137,9 @@ async function btnCrntLocation(latitude, longitude) {
 }
 
 buttonCurrentLocation.addEventListener("click", () => {
-  navigator.geolocation.getCurrentPosition(
-    (res) => {
-      btnCrntLocation(res.coords.latitude, res.coords.longitude);
-    }
-  );
+  navigator.geolocation.getCurrentPosition((res) => {
+    btnCrntLocation(res.coords.latitude, res.coords.longitude);
+  });
 });
 
 loc.addEventListener("keypress", (event) => {
@@ -152,8 +150,8 @@ loc.addEventListener("keypress", (event) => {
       const data = await response.json();
 
       location_value.innerHTML = data.name;
-      tempcvalue.innerHTML = data.main.temp_min;
-      tempfvalue.innerHTML = data.main.temp_max;
+      tempcvalue.innerHTML = Math.round(data.main.temp_min - 273.15) + "&deg C";
+      tempfvalue.innerHTML = Math.round(data.main.temp_max - 273.15) + "&deg C";
       windkmphvalue.innerHTML = data.wind.speed + " kmph";
       windmphvalue.innerHTML = data.wind.gust + " kt";
       winddirectionvalue.innerHTML = data.main.humidity + " %";
